@@ -1,0 +1,256 @@
+/* Shared Expenses Styles */
+.expense-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.filter-group label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.filter-input, .filter-select {
+  width: 100%;
+}
+
+.expense-table-container {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expense-table th, .expense-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.expense-table th {
+  background-color: #f8f9fa;
+  font-weight: 500;
+  color: #475569;
+  font-size: 0.875rem;
+}
+
+.expense-table tr:last-child td {
+  border-bottom: none;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.amount-cell {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.description-cell {
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.actions-cell {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.edit-btn {
+  color: #3b82f6;
+}
+.edit-btn:hover {
+  background-color: #eff6ff;
+}
+
+.delete-btn {
+  color: #ef4444;
+}
+.delete-btn:hover {
+  background-color: #fef2f2;
+}
+
+.expense-empty-state {
+  padding: 3rem;
+  text-align: center;
+  color: #64748b;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.expense-mobile-list {
+  display: none;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(15, 23, 42, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.modal-content h3 {
+  margin: 0 0 1rem 0;
+  color: #0f172a;
+}
+
+.modal-content p {
+  color: #475569;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.btn-secondary {
+  background-color: white;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  padding: 0.625rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  font-family: inherit;
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: #f1f5f9;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  border: none;
+  color: white;
+  padding: 0.625rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  font-family: inherit;
+}
+.btn-danger:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+/* Form Styles */
+.expense-form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  max-width: 600px;
+}
+
+.amount-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 1rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.amount-input-wrapper input {
+  padding-left: 2rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .expense-table {
+    display: none;
+  }
+  .expense-mobile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .expense-mobile-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    background: white;
+  }
+  .expense-mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .expense-mobile-body {
+    margin-bottom: 1rem;
+  }
+  .expense-mobile-body .date-cell {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+  }
+  .expense-mobile-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 0.5rem;
+  }
+  .expense-filters {
+    flex-direction: column;
+  }
+}
